@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RRB PO Computer Mock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="exam-container">
+  <div class="exam-header">
+    <div>IBPS RRB PO • Computer Awareness • 50 Questions</div>
+    <div id="timer">Time Left: <span>30:00</span></div>
+  </div>
+
+  <div class="exam-body">
+    <div class="question-area">
+      <div id="question-number"></div>
+      <div id="question-text"></div>
+      <div class="options" id="options"></div>
+      
+      <div class="nav-buttons">
+        <button onclick="prevQuestion()">◄ Previous</button>
+        <button onclick="markForReview()">Mark for Review</button>
+        <button onclick="clearResponse()">Clear</button>
+        <button onclick="nextQuestion()">Next ►</button>
+      </div>
+    </div>
+
+    <div class="palette">
+      <h3>Question Palette</h3>
+      <div id="palette-buttons"></div>
+      <button class="submit-exam" onclick="submitExam()">Final Submit</button>
+    </div>
+  </div>
+</div>
+
+<div id="result-modal" class="modal hidden">
+  <div class="modal-content">
+    <h2>🎉 Mock Test Completed!</h2>
+    <div class="score-box">
+      <h3>Your Score: <span id="final-score"></span>/50</h3>
+      <p>Accuracy: <span id="accuracy"></span>%</p>
+      <p>Percentile: <span id="percentile"></span> (Top <span id="top-percent"></span>%)</p>
+      <p>All India Rank: <span id="air"></span> (approx)</p>
+    </div>
+    <div class="analysis">
+      <p>Correct: <span id="correct"></span> | Wrong: <span id="wrong"></span> | Unattempted: <span id="unattempted"></span></p>
+      <p>Average Time per Question: <span id="avg-time"></span> sec</p>
+    </div>
+    <a href="index.html" class="start-btn">Back to Home</a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
